@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Sahan Lakshan for software engineering and digital product projects.">
+  <title>Contact | Sahan Lakshan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1d2423;
+      --muted: #626c69;
+      --paper: #d9dddb;
+      --panel: #c3c9c6;
+      --coral: #f16f52;
+      --yellow: #f3c95e;
+      --line: rgba(29, 36, 35, .2);
+      --mono: 'DM Mono', monospace;
+      --sans: 'Manrope', sans-serif;
+      --serif: 'Playfair Display', serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
+    .topbar { padding: 25px 0; border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; }
+    .mark { font-size: 1.15rem; font-weight: 800; letter-spacing: -.06em; }
+    .mark span { color: var(--coral); }
+    .nav-links { display: flex; gap: 32px; font: .68rem var(--mono); text-transform: uppercase; letter-spacing: .08em; }
+    .nav-links a:hover { color: var(--coral); }
+    .nav-links a:last-child { border-bottom: 1px solid var(--ink); padding-bottom: 4px; }
+    .hero { min-height: 300px; display: grid; place-items: center; padding: 72px 24px; color: var(--paper); text-align: center; background: linear-gradient(120deg, #171e1d, #303837); }
+    .kicker { color: var(--coral); font: .68rem var(--mono); letter-spacing: .13em; text-transform: uppercase; }
+    .hero h1 { margin: 15px 0 10px; font-size: clamp(3rem, 7vw, 6rem); font-weight: 500; letter-spacing: .14em; }
+    .hero p { margin: 0; color: #bbc4bf; font-size: .95rem; }
+    main { padding: 70px 0 80px; }
+    .contact-info { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-bottom: 62px; }
+    .info-item { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: center; }
+    .info-icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; background: var(--ink); color: var(--paper); font: .62rem var(--mono); }
+    .info-item strong { display: block; font-size: .9rem; font-weight: 600; }
+    .info-item small, .info-item a { display: inline-block; margin-top: 5px; color: var(--muted); font: .6rem var(--mono); }
+    .info-item a { border-bottom: 1px solid var(--ink); }
+    .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 18px; }
+    .field { display: grid; gap: 8px; }
+    .field.full, .form-footer { grid-column: 1 / -1; }
+    label { font: .62rem var(--mono); }
+    input, select, textarea { width: 100%; border: 1px solid var(--line); border-radius: 0; padding: 14px 12px; background: transparent; color: var(--ink); font: .78rem var(--sans); }
+    textarea { min-height: 140px; resize: vertical; }
+    input:focus, select:focus, textarea:focus { outline: 2px solid var(--coral); outline-offset: 2px; }
+    .form-footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .note { max-width: 390px; margin: 0; color: var(--muted); font-size: .66rem; line-height: 1.5; }
+    .button { border: 0; padding: 16px 20px; cursor: pointer; background: var(--ink); color: var(--paper); font: .66rem var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+    .button:hover { background: var(--coral); }
+    .map { margin-top: 72px; background: var(--panel); }
+    .map-title { padding: 22px; text-align: center; font: .64rem var(--mono); text-transform: uppercase; }
+    .map-title a { display: inline-block; margin-left: 10px; border-bottom: 1px solid var(--ink); }
+    .map-frame-wrap { position: relative; }
+    .map iframe { display: block; width: 100%; height: 320px; border: 0; filter: grayscale(.2); }
+    footer { display: flex; justify-content: space-between; gap: 20px; padding: 22px 0; border-top: 1px solid var(--line); color: var(--muted); font: .62rem var(--mono); text-transform: uppercase; }
+    @media (max-width: 700px) {
+      .wrap { width: min(100% - 36px, 530px); }
+      .topbar { padding: 20px 0; }
+      .nav-links { gap: 16px; font-size: .58rem; }
+      .nav-links a:not(:last-child) { display: none; }
+      .hero { min-height: 230px; padding: 55px 18px; }
+      .hero h1 { font-size: 2.8rem; letter-spacing: .1em; }
+      main { padding: 55px 0 60px; }
+      .contact-info { grid-template-columns: 1fr; gap: 24px; margin-bottom: 44px; }
+      .contact-form { display: block; }
+      .field { margin-bottom: 18px; }
+      .form-footer { display: block; }
+      .button { margin-top: 18px; }
+      .map { margin-top: 52px; }
+      .map iframe { height: 240px; }
+      footer { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="mark" href="Default.html">Sahan Lakshan<span> ®</span></a>
+      <div class="nav-links">
+        <a href="Default.html#work">Work</a>
+        <a href="Default.html#about">About</a>
+        <a href="Default.html#contact">Portfolio</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="kicker">03 - Start a conversation</div>
+      <h1>CONTACT</h1>
+      <p>Reach out and let us bring your vision to life.</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section class="contact-info" aria-label="Contact details">
+      <div class="info-item"><span class="info-icon" aria-hidden="true">TEL</span><div><strong>Call or WhatsApp</strong><a href="https://wa.me/?text=Hi%20Sahan%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener noreferrer">Send a message</a></div></div>
+      <div class="info-item"><span class="info-icon" aria-hidden="true">PIN</span><div><strong>Based in</strong><small>Sri Lanka</small></div></div>
+      <div class="info-item"><span class="info-icon" aria-hidden="true">MAIL</span><div><strong>Email</strong><a href="mailto:sahanlakshan.dev@gmail.com">sahanlakshan.dev@gmail.com</a></div></div>
+    </section>
+
+    <form class="contact-form" action="mailto:sahanlakshan.dev@gmail.com" method="post" enctype="text/plain">
+      <div class="field"><label for="name">Your Name *</label><input id="name" name="name" type="text" placeholder="Enter your name" required></div>
+      <div class="field"><label for="email">Your Email *</label><input id="email" name="email" type="email" placeholder="Enter your email" required></div>
+      <div class="field"><label for="subject">Subject</label><input id="subject" name="subject" type="text" placeholder="Project subject"></div>
+      <div class="field"><label for="service">Service Desired</label><select id="service" name="service"><option>Web Design</option><option>Full-stack Development</option><option>Developer Tools</option><option>Cloud Systems</option></select></div>
+      <div class="field full"><label for="message">Your Message</label><textarea id="message" name="message" placeholder="Tell me about your project"></textarea></div>
+      <div class="form-footer"><p class="note">* Required fields. Your message will open in your email app for sending.</p><button class="button" type="submit">Send message ↗</button></div>
+    </form>
+
+    <section class="map" aria-label="Location map">
+      <div class="map-title">My location · Sri Lanka <a href="https://www.google.com/maps/search/?api=1&amp;query=7.3018578%2C80.1168577" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a></div>
+      <div class="map-frame-wrap"><iframe title="Google Map showing Sahan Lakshan location in Sri Lanka" src="https://maps.google.com/maps?q=7.3018578%2C80.1168577&amp;z=14&amp;output=embed" loading="lazy"></iframe></div>
+    </section>
+  </main>
+
+  <footer class="wrap"><span>© 2026 Sahan Lakshan</span><span>Built with intent</span><a href="#top">Back to top ↑</a></footer>
+  <script>
+    document.querySelector('.contact-form').addEventListener('submit', event => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const subject = form.elements.subject.value || 'Portfolio project enquiry';
+      const body = `Name: ${form.elements.name.value}\nEmail: ${form.elements.email.value}\nService: ${form.elements.service.value}\n\n${form.elements.message.value}`;
+      window.location.href = `mailto:sahanlakshan.dev@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  </script>
+</body>
+</html>
